@@ -34,7 +34,10 @@ A bit about this module
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| available\_versions | List of versions available | `list` | n/a | yes |
+| version\_constraint | The version constraint you want to follow in NPM format (eg: '~1.0.1') | `string` | n/a | yes |
 
 ## Outputs
 
