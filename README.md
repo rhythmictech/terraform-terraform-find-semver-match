@@ -28,20 +28,19 @@ A bit about this module
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| external | n/a |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| name | Moniker to apply to all resources in the module | `string` | n/a | yes |
-| tags | User-Defined tags | `map(string)` | `{}` | no |
+No input.
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| tags\_module | Tags Module in it's entirety |
+| target\_version | Version from the list that best matches the constraint |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
