@@ -11,7 +11,7 @@ Given a version constraint and a list of versions, finds the most appropriate se
 ## Example
 Here's what using the module will look like
 ```hcl
-module "find-semver-match" {
+module "find_semver_match" {
   source  = "rhythmictech/find-semver-match/terraform"
   version = "1.0.0-rc1"
   
@@ -19,7 +19,7 @@ module "find-semver-match" {
     "1.0.0",
     "1.0.1",
     "1.1.0"
-  ],
+  ]
   version_constraint = "~1.0.0"
 }
 ```
