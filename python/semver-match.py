@@ -15,10 +15,13 @@ def getSpec(string):
   return semantic_version.NpmSpec(string)
 
 def getVersion(string):
-  return semantic_version.Version.coerce(string)
+  try:
+    return semantic_version.Version.coerce(string.lstrip("vV"))
+  except:
+    return None       # We don't want the whole thing to fail if there's one invalid version in the list
 
 def getVersions(list):
-  return [getVersion(string) for string in list]
+  return [ f for string in list if (f := getVersion(string)) is not None ]
 
 def getTargetVersion(spec, versionList):
   return str(spec.select(versionList))

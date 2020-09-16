@@ -9,7 +9,7 @@ data "external" "target_version" {
   program = ["python", "${path.module}/python/semver-match.py"]
 
   query = {
-    constraint = "~2.0.1-"
+    constraint = "~2.0.1-0"
     versions   = local.versions_string
   }
 }
