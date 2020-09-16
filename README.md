@@ -24,13 +24,14 @@ A bit about this module
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.14 |
+| terraform | >= 0.12.28 |
+| external | ~> 1.2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| external | n/a |
+| external | ~> 1.2.0 |
 
 ## Inputs
 
