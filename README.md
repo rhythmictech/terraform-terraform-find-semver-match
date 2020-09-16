@@ -30,28 +30,28 @@ This module was designed for finding the desired GitHub release from a semver co
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name      | Version    |
-|-----------|------------|
+| Name | Version |
+|------|---------|
 | terraform | >= 0.12.28 |
-| external  | ~> 1.2.0   |
+| external | ~> 1.2.0 |
 
 ## Providers
 
-| Name     | Version  |
-|----------|----------|
+| Name | Version |
+|------|---------|
 | external | ~> 1.2.0 |
 
 ## Inputs
 
-| Name                | Description                                                            | Type     | Default | Required |
-|---------------------|------------------------------------------------------------------------|----------|---------|:--------:|
-| available\_versions | List of versions available                                             | `list`   | n/a     |   yes    |
-| version\_constraint | The version constraint you want to follow in NPM format (eg: '~1.0.1') | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| available\_versions | List of versions available | `list` | n/a | yes |
+| version\_constraint | The version constraint you want to follow in NPM format (eg: '~1.0.1') | `string` | n/a | yes |
 
 ## Outputs
 
-| Name            | Description                                            |
-|-----------------|--------------------------------------------------------|
+| Name | Description |
+|------|-------------|
 | target\_version | Version from the list that best matches the constraint |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
