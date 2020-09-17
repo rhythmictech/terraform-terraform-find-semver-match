@@ -1,11 +1,9 @@
-
-variable "name" {
-  description = "Moniker to apply to all resources in the module"
-  type        = string
+variable "available_versions" {
+  type        = list
+  description = "List of versions available"
 }
 
-variable "tags" {
-  default     = {}
-  description = "User-Defined tags"
-  type        = map(string)
+variable "version_constraint" {
+  type        = string
+  description = "The version constraint you want to follow in NPM format (eg: '~1.0.1')"
 }

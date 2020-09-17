@@ -1,16 +1,13 @@
-
-module "tags" {
-  source  = "rhythmictech/tags/terraform"
-  version = "1.0.0"
-
-  enforce_case = "UPPER"
-  names        = [var.name]
-  tags         = var.tags
+locals {
+  versions_string = join(",", var.available_versions)
 }
 
-locals {
-  # tflint-ignore: terraform_unused_declarations
-  name = module.tags.name
-  # tflint-ignore: terraform_unused_declarations
-  tags = module.tags.tags_no_name
+
+data "external" "target_version" {
+  program = ["python3", "${path.module}/python/semver-match.py"]
+
+  query = {
+    constraint = var.version_constraint
+    versions   = local.versions_string
+  }
 }
