@@ -4,7 +4,7 @@ locals {
 
 
 data "external" "target_version" {
-  program = ["python", "${path.module}/python/semver-match.py"]
+  program = ["python3", "${path.module}/python/semver-match.py"]
 
   query = {
     constraint = var.version_constraint
