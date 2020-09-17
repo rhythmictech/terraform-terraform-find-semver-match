@@ -44,21 +44,21 @@ repos:
     rev: v3.0.0
     hooks:
       - id: check-case-conflict
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: check-json
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: check-merge-conflict
       - id: check-symlinks
       - id: check-yaml
         args:
           - --unsafe
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: end-of-file-fixer
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: mixed-line-ending
         args:
           - --fix=lf
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: no-commit-to-branch
         args:
           - --branch
@@ -71,8 +71,12 @@ repos:
         args:
           - --autofix
           - --top-keys=name,Name
-        exclude: ^lib/.*
+        exclude: ^python/lib/.*
       - id: trailing-whitespace
         args:
           - --markdown-linebreak-ext=md
-        exclude: ([Rr][Ee][Aa][Dd][Mm][Ee]\.md)|(^python/lib/.*)
+        exclude: >
+          (?x)(
+            ([Rr][Ee][Aa][Dd][Mm][Ee]\.md)|
+            (^python/lib/.*)
+          )
