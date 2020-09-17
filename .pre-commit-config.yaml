@@ -75,4 +75,4 @@ repos:
       - id: trailing-whitespace
         args:
           - --markdown-linebreak-ext=md
-        exclude: ([Rr][Ee][Aa][Dd][Mm][Ee]\.md)|(^lib/.*)
+        exclude: ([Rr][Ee][Aa][Dd][Mm][Ee]\.md)|(^python/lib/.*)
